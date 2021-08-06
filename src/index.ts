@@ -8,9 +8,16 @@ export type Breakpoints = (
   unit: CSSPropUnits,
   values: Record<number, number | string>,
   mediaQueryType?: CSSMediaQueries,
-  important?: boolean
 ) => FlattenSimpleInterpolation;
 
+/**
+ * Generate CSS media queries compatible with your Styled Component.
+ * @param rule - css rule you're applying: e.g. padding, margin-top
+ * @param unit - unit: px, rem, em, vh, %
+ * @param values - value: '100' 50 
+ * @param mediaQueryType - media query: max-width, min-width
+ * @returns 
+ */
 export const breakpoints: Breakpoints = (
   rule = 'padding',
   unit = 'px',
