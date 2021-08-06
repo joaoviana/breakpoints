@@ -24,7 +24,7 @@ export const breakpoints: Breakpoints = (
   values,
   mediaQueryType = 'max-width'
 ) =>
-  css`${Object.entries(values).reduce(
+  css`${Object.entries(values).reverse().reduce(
   (mediaQueries, [breakpointValue, ruleValue]) =>
     (mediaQueries += `
     @media screen and (${mediaQueryType}: ${breakpointValue}px) {
