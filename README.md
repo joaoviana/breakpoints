@@ -2,7 +2,7 @@
 
 [NPM](https://www.npmjs.com/package/sc-breakpoints)
 
-[Sandbox](https://codesandbox.io/s/react-typescript-styled-components-forked-doz0r?file=/src/index.tsx)
+[Sandbox example](https://codesandbox.io/s/react-typescript-styled-components-forked-doz0r?file=/src/index.tsx)
 
 A util for setting breakpoints in your Styled Components (built with TypeScript).
 
