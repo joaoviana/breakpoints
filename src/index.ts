@@ -1,12 +1,9 @@
 import { css, FlattenSimpleInterpolation } from 'styled-components';
-import { CSSProperties } from './types/css-properties';
+import type { CSSMediaQueries } from './types/css-media-queries';
+import type { CSSPropUnits } from './types/css-prop-units';
+import type { CSSProperties } from './types/css-properties';
 
-// TODO: move these types to appropriate file
-type CSSPropUnits = 'px' | 'rem' | 'em' | '%' | 'vw' | 'vh';
-
-type CSSMediaQueries = 'max-width' | 'min-width' | 'max-height' | 'min-height';
-
-type Breakpoints = (
+export type Breakpoints = (
   rule: keyof CSSProperties,
   unit: CSSPropUnits,
   values: Record<number, number | string>,
@@ -30,3 +27,5 @@ export const breakpoints: Breakpoints = (
       ''
     ),
   ] as unknown) as TemplateStringsArray);
+
+export {CSSMediaQueries, CSSPropUnits, CSSProperties} 
