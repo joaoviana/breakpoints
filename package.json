@@ -3,6 +3,15 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaoviana/breakpoints.git"
+  },
   "files": [
     "dist",
     "src"
