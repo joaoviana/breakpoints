@@ -1,1 +1,1 @@
-export type CSSPropUnits = 'px' | 'rem' | 'em' | '%' | 'vw' | 'vh';
+export type CSSPropUnits = 'px' | 'rem' | 'em' | '%' | 'vw' | 'vh' | '';
