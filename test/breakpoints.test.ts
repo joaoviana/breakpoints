@@ -12,21 +12,21 @@ describe('breakpoints', () => {
       })
     ).toStrictEqual([
       `
-        @media screen and (max-width: 768px) {
-          width: 80vw;
-        }
-        @media screen and (max-width: 992px) {
-          width: 60vw;
-        }
-        @media screen and (max-width: 1280px) {
-          width: 60vw;
-        }
-        @media screen and (max-width: 1400px) {
-          width: 40vw;
-        }
-        @media screen and (max-width: 1600px) {
-          width: 40vw;
-        }`,
+    @media screen and (max-width: 768px) {
+      width: 80vw;
+    }
+    @media screen and (max-width: 992px) {
+      width: 60vw;
+    }
+    @media screen and (max-width: 1280px) {
+      width: 60vw;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 40vw;
+    }
+    @media screen and (max-width: 1600px) {
+      width: 40vw;
+    }`,
     ]);
   });
 });

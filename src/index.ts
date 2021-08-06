@@ -8,7 +8,7 @@ export type Breakpoints = (
   unit: CSSPropUnits,
   values: Record<number, number | string>,
   mediaQueryType?: CSSMediaQueries,
-) => FlattenSimpleInterpolation;
+) => FlattenSimpleInterpolation
 
 /**
  * Generate CSS media queries compatible with your Styled Component.
@@ -16,7 +16,7 @@ export type Breakpoints = (
  * @param unit - unit: px, rem, em, vh, %
  * @param values - value: '100' 50 
  * @param mediaQueryType - media query: max-width, min-width
- * @returns 
+ * @returns themed CSS Function
  */
 export const breakpoints: Breakpoints = (
   rule = 'padding',
@@ -24,15 +24,12 @@ export const breakpoints: Breakpoints = (
   values,
   mediaQueryType = 'max-width'
 ) =>
-  css(([
-    Object.entries(values).reduce(
-      (mediaQueries, [breakpointValue, ruleValue]) =>
-        (mediaQueries += `
-        @media screen and (${mediaQueryType}: ${breakpointValue}px) {
-          ${rule}: ${ruleValue}${unit};
-        }`),
-      ''
-    ),
-  ] as unknown) as TemplateStringsArray);
+  css`${Object.entries(values).reduce(
+  (mediaQueries, [breakpointValue, ruleValue]) =>
+    (mediaQueries += `
+    @media screen and (${mediaQueryType}: ${breakpointValue}px) {
+      ${rule}: ${ruleValue}${unit};
+    }`),
+  '')}`;
 
 export {CSSMediaQueries, CSSPropUnits, CSSProperties} 
